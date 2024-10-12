@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EScanner.Views.FrontPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="FrontPage"
+    BackgroundColor="#12372A">
+    <VerticalStackLayout>
+        <Image
+            Margin="10,10"
+            HeightRequest="200"
+            Source="bgif.gif" />
+
+        <Label
+            Margin="0,0,0,0"
+            Padding="10"
+            FontSize="40"
+            HorizontalOptions="Center"
+            Text="Welcome"
+            TextColor="White" />
+
+        <Label
+            Margin="0,-30,0,0"
+            Padding="10"
+            FontSize="20"
+            HorizontalOptions="Center"
+            Text="to"
+            TextColor="White" />
+
+        <Image
+            Margin="0,-20,0,0"
+            HeightRequest="200"
+            IsAnimationPlaying="True"
+            Source="logo.png"
+            VerticalOptions="Center" />
+
+        <Button
+            Margin="40,50,40,0"
+            Clicked="btnadd_Clicked"
+            CornerRadius="20"
+            FontAttributes="Bold"
+            FontFamily="serif"
+            FontSize="15"
+            Text="Lets Get Started"
+            TextColor="White">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="1,0">
+                    <GradientStop Offset="0" Color="#9BEC00" />
+                    <GradientStop Offset="1" Color="#059212" />
+                </LinearGradientBrush>
+            </Button.Background>
+
+            <Button.Shadow>
+                <Shadow
+                    Brush="white"
+                    Opacity="0.3"
+                    Radius="10"
+                    Offset="0,15" />
+            </Button.Shadow>
+        </Button>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>

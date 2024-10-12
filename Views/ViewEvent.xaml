@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="EScanner.Views.ViewEvent"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="ViewEvent"
+    BackgroundColor="#12372A">
+
+    <StackLayout BackgroundColor="#12372A" Orientation="Vertical">
+
+        <StackLayout BackgroundColor="#12372A" Orientation="Horizontal">
+            <ImageButton
+                Margin="15,15,10,0"
+                HeightRequest="70"
+                HorizontalOptions="Start"
+                Source="logo"
+                VerticalOptions="Center"
+                WidthRequest="70" />
+
+            <Label
+                Margin="10,10,0,0"
+                FontFamily="serif"
+                FontSize="20"
+                HorizontalOptions="Start"
+                Text="List of"
+                TextColor="White"
+                VerticalOptions="Center" />
+            <Label
+                x:Name="labelings"
+                Margin="5,10,0,0"
+                FontFamily="serif"
+                FontSize="20"
+                HorizontalOptions="Start"
+                Text="Event"
+                TextColor="White"
+                VerticalOptions="Center" />
+
+        </StackLayout>
+
+
+
+        <Border
+            Margin="10,30,10,0"
+            Padding="0,40,0,30"
+            BackgroundColor="#373A40"
+            HeightRequest="690"
+            StrokeShape="RoundRectangle 20"
+            StrokeThickness="0">
+
+            <CollectionView
+                x:Name="ListofEvent"
+                Grid.Row="3"
+                Margin="10,30,10,0"
+                EmptyView="No Student Found"
+                HeightRequest="600"
+                HorizontalOptions="Center">
+                <CollectionView.ItemsLayout>
+                    <GridItemsLayout Orientation="Vertical" Span="1" />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <ContentView Padding="2">
+                            <SwipeView>
+                                <!--<SwipeView.RightItems>
+                                    <SwipeItems Mode="Reveal">
+
+                                        <SwipeItemView
+                                            x:Name="itemschool"
+                                            Margin="5"
+                                            Invoked="itemedititstudent_Invoked_1">
+
+
+                                            <Border
+                                                Padding="0"
+                                                BackgroundColor="Transparent"
+                                                HeightRequest="90"
+                                                Stroke="#9BEC00"
+                                                StrokeShape="RoundRectangle 10"
+                                                StrokeThickness="5"
+                                                WidthRequest="90">
+                                                <StackLayout
+                                                    HorizontalOptions="CenterAndExpand"
+                                                    Orientation="Vertical"
+                                                    VerticalOptions="CenterAndExpand">
+
+                                                    <Image
+                                                        Aspect="AspectFit"
+                                                        HeightRequest="40"
+                                                        Source="profile"
+                                                        WidthRequest="40" />
+
+                                                    <Label
+                                                        FontSize="Micro"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        Text="View"
+                                                        TextColor="White"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                    <Label
+                                                        FontSize="Micro"
+                                                        HorizontalOptions="CenterAndExpand"
+                                                        Text="Student"
+                                                        TextColor="White"
+                                                        VerticalOptions="CenterAndExpand" />
+                                                </StackLayout>
+                                            </Border>
+                                        </SwipeItemView>
+                                    </SwipeItems>
+
+                                </SwipeView.RightItems>-->
+
+                                <Border
+                                    Margin="3"
+                                    Padding="0"
+                                    BackgroundColor="white"
+                                    HeightRequest="150"
+                                    StrokeShape="RoundRectangle 10"
+                                    StrokeThickness="0">
+                                    <Border.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" />
+                                    </Border.GestureRecognizers>
+                                    <StackLayout
+                                        Grid.Column="1"
+                                        Margin="20"
+                                        BackgroundColor="Transparent"
+                                        HorizontalOptions="Fill"
+                                        Orientation="Vertical">
+
+
+                                        <Grid
+                                            Margin="20,0,0,10"
+                                            Padding="0,0,0,10"
+                                            RowDefinitions="Auto, Auto"
+                                            RowSpacing="0">
+                                            <Grid Grid.Row="0" RowDefinitions="Auto, Auto">
+                                                <Label
+                                                    Grid.Row="0"
+                                                    FontSize="14"
+                                                    HorizontalOptions="Start"
+                                                    Text="ID:"
+                                                    TextColor="Black"
+                                                    VerticalOptions="Center" />
+                                                <Label
+                                                    Grid.Row="1"
+                                                    Margin="15,0,0,0"
+                                                    FontAttributes="Bold"
+                                                    FontSize="20"
+                                                    Text="{Binding EventCode}"
+                                                    TextColor="Black" />
+                                            </Grid>
+
+
+
+                                            <Grid Grid.Row="1" RowDefinitions="auto,auto">
+                                                <Label
+                                                    Grid.Row="0"
+                                                    FontSize="14"
+                                                    HorizontalOptions="Start"
+                                                    Text="Name:"
+                                                    TextColor="Black"
+                                                    VerticalOptions="CenterAndExpand" />
+                                                <Label
+                                                    Grid.Row="1"
+                                                    Margin="15,0,0,0"
+                                                    FontAttributes="Bold"
+                                                    FontSize="20"
+                                                    Text="{Binding EventName}"
+                                                    TextColor="Black" />
+                                            </Grid>
+
+                                        </Grid>
+
+
+                                    </StackLayout>
+                                </Border>
+
+                            </SwipeView>
+
+                        </ContentView>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </Border>
+
+
+    </StackLayout>
+</ContentPage>
